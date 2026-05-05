@@ -1,0 +1,56 @@
+.navbar {
+  transition: all 0.3s ease;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+/* fixed shrink effect */
+.navbar-shrink {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  background-color: rgba(33, 37, 41, 0.95) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* logo */
+.navbar-logo {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+/* shrink logo */
+.logo-shrink {
+  width: 40px;
+  height: 40px;
+}
+
+/* university name */
+.brand-title {
+  font-size: 1.35rem;
+  transition: all 0.3s ease;
+}
+
+/* smaller text when scrolling */
+.text-small {
+  font-size: 1.05rem;
+}
+
+/* subtitle */
+.brand-subtitle {
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+/* hide subtitle on scroll */
+.hide-subtitle {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* page spacing to avoid overlap */
+body {
+  padding-top: 80px;
+}
