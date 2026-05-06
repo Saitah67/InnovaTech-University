@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const AboutPreview = () => {
   return (
     <div className="container my-5 ">
@@ -13,9 +15,9 @@ const AboutPreview = () => {
             rapidly evolving world.
           </p>
 
-          <button className="btn btn-dark mt-3">
+          <Link className="nav-link" to="/about"><button className="btn btn-dark mt-3">
             Learn More
-          </button>
+          </button></Link>
         </div>
 
         {/* Image Section */}

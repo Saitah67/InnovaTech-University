@@ -56,7 +56,7 @@ const Contacts = () => {
 
             <p className="text-muted">
               Our support team is available Monday to Friday,
-              8:00 AM to 5:00 PM.
+              8:00 AM - 5:00 PM.
             </p>
           </div>
 

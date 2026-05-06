@@ -1,4 +1,5 @@
 import React from "react";
+import innovatech from "../images/innovatech.jpg"
 
 const About = () => {
   return (
@@ -30,15 +31,15 @@ const About = () => {
             </p>
 
             <ul className="mt-3">
-              <li>✔ Industry-relevant programs</li>
-              <li>✔ Experienced lecturers</li>
-              <li>✔ Modern learning facilities</li>
+              <li> Industry-relevant programs</li>
+              <li> Experienced lecturers</li>
+              <li> Modern learning facilities</li>
             </ul>
           </div>
 
           <div className="col-md-6" data-aos="fade-left">
             <img
-              src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1"
+              src={innovatech}
               alt="University"
               className="img-fluid rounded shadow"
             />
@@ -53,12 +54,12 @@ const About = () => {
           <div className="row">
 
             <div className="col-md-3" data-aos="fade-up">
-              <h2 className="fw-bold">10K+</h2>
+              <h2 className="fw-bold">5K+</h2>
               <p className="text-muted">Students</p>
             </div>
 
             <div className="col-md-3" data-aos="fade-up" data-aos-delay="100">
-              <h2 className="fw-bold">120+</h2>
+              <h2 className="fw-bold">15+</h2>
               <p className="text-muted">Courses</p>
             </div>
 

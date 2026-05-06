@@ -1,6 +1,6 @@
 const Statistics = () => {
   return (
-    <div className="py-5 bg-dark text-white">
+    <div className="py-5 bg-dark text-white mb-5">
 
       <div className="container text-center">
 
@@ -18,7 +18,7 @@ const Statistics = () => {
           {/* Students */}
           <div className="col-md-3 col-6">
             <div className="p-4 stat-box data-aos='fade-up' data-aos-delay='100'">
-              <h1 className="fw-bold text-warning">12,000+</h1>
+              <h1 className="fw-bold text-warning">5,000+</h1>
               <p>Students</p>
             </div>
           </div>
@@ -26,7 +26,7 @@ const Statistics = () => {
           {/* Courses */}
           <div className="col-md-3 col-6">
             <div className="p-4 stat-box data-aos='fade-up' data-aos-delay='200'">
-              <h1 className="fw-bold text-warning">80+</h1>
+              <h1 className="fw-bold text-warning">15+</h1>
               <p>Courses</p>
             </div>
           </div>
@@ -34,7 +34,7 @@ const Statistics = () => {
           {/* Lecturers */}
           <div className="col-md-3 col-6">
             <div className="p-4 stat-box data-aos='fade-up' data-aos-delay='300'">
-              <h1 className="fw-bold text-warning">450+</h1>
+              <h1 className="fw-bold text-warning">150+</h1>
               <p>Lecturers</p>
             </div>
           </div>

@@ -36,9 +36,9 @@ const Sports = () => {
             </p>
 
             <ul>
-              <li>✔ Professional coaching</li>
-              <li>✔ Modern sports facilities</li>
-              <li>✔ Inter-university competitions</li>
+              <li>Professional coaching</li>
+              <li>Modern sports facilities</li>
+              <li>Inter-university competitions</li>
             </ul>
           </div>
 
@@ -169,9 +169,7 @@ const Sports = () => {
         <h3 className="fw-bold mb-3">Join Our Sports Programs</h3>
         <p className="mb-4">Be part of a winning team and grow your talent.</p>
 
-        <a href="/apply" className="btn btn-warning btn-lg">
-          Join Now
-        </a>
+       
       </div>
 
     </div>
