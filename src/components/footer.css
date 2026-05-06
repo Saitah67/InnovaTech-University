@@ -43,3 +43,19 @@
   font-size: 0.85rem;
   color: #888;
 }
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social a {
+  color: #fff;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.footer-social a:hover {
+  color: #f0c040;
+  transform: translateY(-3px);
+}

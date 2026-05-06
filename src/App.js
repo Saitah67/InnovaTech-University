@@ -19,6 +19,8 @@ import Navbar from './components/navbar';
 import Programs from './components/programs';
 import Gallery from './components/gallery';
 import Footer from './components/footer';
+import Faq from './components/faq';
+import BackToTop from './components/backtotop';
 
 
 
@@ -49,10 +51,11 @@ function App() {
           <Route path="/apply" element={<Apply />} />
           <Route path="/programs" element={<Programs />} />
           <Route path="/gallery" element={<Gallery />} />
-
+          <Route path="/faq" element={<Faq />} />
         </Routes>
 
         <Footer />
+        <BackToTop />
 
       </div>
     </Router>

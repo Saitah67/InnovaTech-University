@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./footer.css";
 
+// Social icons
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <footer className="university-footer">
@@ -17,6 +20,25 @@ const Footer = () => {
               A leading institution committed to excellence in education,
               innovation, and research. We prepare students for global impact.
             </p>
+
+            {/* Social Icons */}
+            <div className="footer-social mt-3">
+              <a href="https://facebook.com" target="_blank" rel="noreferrer">
+                <FaFacebook />
+              </a>
+
+              <a href="https://twitter.com" target="_blank" rel="noreferrer">
+                <FaTwitter />
+              </a>
+
+              <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                <FaInstagram />
+              </a>
+
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+                <FaLinkedin />
+              </a>
+            </div>
           </div>
 
           {/* Column 2 - Quick Links */}
@@ -28,23 +50,12 @@ const Footer = () => {
               <li><Link to="/academics">Academics</Link></li>
               <li><Link to="/programs">Programs</Link></li>
               <li><Link to="/gallery">Gallery</Link></li>
+              <li><Link to="/apply">Admissions</Link></li>
+              <li><Link to="/faq">FAQ</Link></li>
             </ul>
           </div>
 
-          {/* Column 3 - Resources */}
-          <div className="col-md-2">
-            <h5 className="footer-title">Resources</h5>
-            <ul className="footer-links">
-              <li><Link to="/library">Library</Link></li>
-              <li><Link to="/sports">Sports</Link></li>
-              <li><Link to="/apply">Apply</Link></li>
-              <li><Link to="/gallery">Gallery</Link></li>
-              <li><Link to="/sports">Sports</Link></li>
-              <li><Link to="/contacts">Contact</Link></li>
-            </ul>
-          </div>
-
-          {/* Column 4 - Contact */}
+          {/* Column 3 - Contact */}
           <div className="col-md-3">
             <h5 className="footer-title">Contact</h5>
             <p className="footer-text">
