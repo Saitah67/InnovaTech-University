@@ -9,8 +9,10 @@ import img4 from "../images/gallery4.jpg";
 import img5 from "../images/gallery8.jpg";
 import img6 from "../images/gallery6.jpg";
 
+import me from "../images/1000022342.jpg"
 
-const images = [img1, img2, img3, img4, img5, img6];
+
+const images = [img1, img2, img3, me, img4, img5, img6];
 
 const Gallery = () => {
   return (

@@ -21,7 +21,8 @@ import Gallery from './components/gallery';
 import Footer from './components/footer';
 import Faq from './components/faq';
 import BackToTop from './components/backtotop';
-
+import AdminLogin from './components/admin';
+import AdminDashboard from './components/admindahboard';
 
 
 
@@ -52,6 +53,8 @@ function App() {
           <Route path="/programs" element={<Programs />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/faq" element={<Faq />} />
+          <Route path="/admin" element={<AdminLogin />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
         </Routes>
 
         <Footer />

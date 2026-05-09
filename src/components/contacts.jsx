@@ -9,6 +9,8 @@ const Contacts = () => {
     message: ""
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -16,36 +18,54 @@ const Contacts = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
-    axios.post("https://vincentfungo.alwaysdata.net/api/university/contact", formData)
-      .then((res) => {
-        alert(res.data.message);
-        setFormData({ name: "", email: "", message: "" });
-      })
-      .catch((err) => {
-        console.log(err);
-        alert("Failed to send message");
+    try {
+      const res = await axios.post(
+        "https://vincentfungo.alwaysdata.net/api/university/contact",
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        }
+      );
+
+      alert(res.data.message);
+
+      setFormData({
+        name: "",
+        email: "",
+        message: ""
       });
+
+    } catch (err) {
+      console.log(err);
+      alert(
+        err?.response?.data?.message ||
+        "Failed to send message"
+      );
+    }
+
+    setLoading(false);
   };
 
   return (
     <div>
 
       {/* HERO */}
-      <div className="bg-dark text-white text-center py-5" data-aos="fade-up">
+      <div className="bg-dark text-white text-center py-5">
         <h1 className="fw-bold">Contact Us</h1>
-        <p className="lead">
-          Get in touch with InnovaTech University
-        </p>
+        <p className="lead">Get in touch with InnovaTech University</p>
       </div>
 
       <div className="container my-5">
         <div className="row">
 
           {/* CONTACT INFO */}
-          <div className="col-md-5 mb-4" data-aos="fade-right">
+          <div className="col-md-5 mb-4">
             <h3 className="fw-bold mb-3">Reach Us</h3>
 
             <p>Location: Nairobi, Kenya</p>
@@ -60,55 +80,50 @@ const Contacts = () => {
             </p>
           </div>
 
-          {/* CONTACT FORM */}
-          <div className="col-md-7" data-aos="fade-left">
+          {/* FORM */}
+          <div className="col-md-7">
             <div className="card shadow p-4">
 
               <h4 className="fw-bold mb-3">Send us a message</h4>
 
               <form onSubmit={handleSubmit}>
 
-                <div className="mb-3">
-                  <label className="form-label">Full Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    className="form-control"
-                    placeholder="Enter your name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
+                <input
+                  type="text"
+                  name="name"
+                  className="form-control mb-3"
+                  placeholder="Full Name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
 
-                <div className="mb-3">
-                  <label className="form-label">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    className="form-control"
-                    placeholder="Enter your email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
+                <input
+                  type="email"
+                  name="email"
+                  className="form-control mb-3"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
 
-                <div className="mb-3">
-                  <label className="form-label">Message</label>
-                  <textarea
-                    name="message"
-                    className="form-control"
-                    rows="4"
-                    placeholder="Your message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                  ></textarea>
-                </div>
+                <textarea
+                  name="message"
+                  className="form-control mb-3"
+                  rows="5"
+                  placeholder="Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                />
 
-                <button type="submit" className="btn btn-warning">
-                  Send Message
+                <button
+                  type="submit"
+                  className="btn btn-warning w-100"
+                  disabled={loading}
+                >
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
 
               </form>
@@ -116,19 +131,6 @@ const Contacts = () => {
             </div>
           </div>
 
-        </div>
-      </div>
-
-      {/* GOOGLE MAP */}
-      <div className="container mb-5" data-aos="zoom-in">
-        <h4 className="fw-bold mb-3 text-center">Our Location</h4>
-
-        <div className="ratio ratio-16x9">
-          <iframe
-            src="https://maps.google.com/maps?q=Nairobi&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            title="map"
-            allowFullScreen
-          ></iframe>
         </div>
       </div>
 
